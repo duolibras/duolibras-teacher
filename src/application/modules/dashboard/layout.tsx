@@ -1,24 +1,38 @@
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/application/shared/components/ui/breadcrumb";
 import { Separator } from "@/application/shared/components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/application/shared/components/ui/sidebar";
+import { useStore } from "@/main/store/use-store";
 import React, { useEffect, useState } from "react";
-import { NavLink, Outlet, useLocation } from "react-router";
+import { NavLink, Outlet, useLocation, useParams } from "react-router";
 import { AppSidebar } from "./components/app-sidebar";
 import { collapsibleItems } from "./layout-collapsible-items";
 import { routePath } from "./layout-route-path";
 
 export function DashboardLayout() {
   const { pathname } = useLocation();
+  const params = useParams();
   const [breadcrumb, setBreadCrumb] = useState<{label: string, route?: string}[]>([]);
+  const { idMap } = useStore();
 
   useEffect(() => {
-    const path = pathname.split('/');
+    const pathSegments = pathname.split('/').filter(Boolean);
 
-    setBreadCrumb(path.filter((p) => routePath[p]).map((p) => ({
-     label: routePath[p].label,
-     route: routePath[p].route, 
-    })));
-  }, [pathname]);
+    const mappedBreadcrumb = pathSegments.map((segment) => {
+      const labelMapped = idMap[segment];
+      const param = Object.entries(params).find(([_key, value]) => value === segment);
+      const route = param 
+        ? param[0] === 'courseId' ? `/dashboard/course/${param[1]}` : undefined
+        : undefined;
+        
+      if (labelMapped) {
+        return { label: labelMapped, route }
+      }
+
+      return routePath[segment] ?? { label: segment, route };
+    });
+
+    setBreadCrumb(mappedBreadcrumb);
+  }, [idMap, params, pathname]);
 
   return (
     <SidebarProvider>

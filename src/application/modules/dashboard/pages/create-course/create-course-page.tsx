@@ -1,5 +1,6 @@
 import { Input } from "@/application/shared/components/ui/input";
 
+import { GoBackButton } from "@/application/shared/components/go-back-button";
 import { Alert, AlertDescription, AlertTitle } from "@/application/shared/components/ui/alert";
 import { Button } from "@/application/shared/components/ui/button";
 import { Card } from "@/application/shared/components/ui/card";
@@ -45,6 +46,7 @@ export function CreateCourse() {
         ))}
       </div>
     
+      <GoBackButton />
       <div className="h-full w-full max-w-6xl flex justify-center items-center flex-col px-10 mx-auto">
         <div className="justify-start flex w-full mb-4">
           <h1 className="text-3xl font-bold">Criar curso</h1>

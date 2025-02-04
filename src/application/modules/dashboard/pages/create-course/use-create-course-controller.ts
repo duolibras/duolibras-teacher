@@ -39,7 +39,7 @@ export function useCreateCourseController() {
 
   const videoDropZone = useDropzone({
     multiple: false,
-    accept: { 'video/*': [] },
+    accept: { 'video/mp4': [] },
     onDrop: ([acceptedFile]) => {
       form.setValue('files.video', {
         filename: acceptedFile.name,

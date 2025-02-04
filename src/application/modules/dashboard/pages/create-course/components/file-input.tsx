@@ -36,7 +36,11 @@ export function FileInput({ state, description, label, file, onRemove }: IProps)
                 {file.type.startsWith("image/") ? (
                   <img src={URL.createObjectURL(file)} alt="Preview" className="w-full h-auto rounded-md" />
                 ) : file.type.startsWith("video/") ? (
-                  <video controls className="w-full rounded-md">
+                  <video 
+                    controls 
+                    className="w-full rounded-md"
+                    controlsList="noplaybackrate nodownload"
+                  >
                     <source src={URL.createObjectURL(file)} type={file.type} />
                     Seu navegador não suporta o vídeo.
                   </video>

@@ -14,4 +14,10 @@ export const routePath: { [key: string]: { label: string, route?: string } } = {
     label: 'Curso gratuito',
     route: '/dashboard/create-course/free'
   },
+  'course': {
+    label: 'Ver Curso',
+  },
+  'create-class': {
+    label: 'Criar aula',
+  },
 };

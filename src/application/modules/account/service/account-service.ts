@@ -1,5 +1,5 @@
 import { ApiService } from "@/application/shared/services/api-service";
-import { CreatePaymentDetailsDTO, CreatePaymentDetailsResponse, UpdatePaymentDetailsDTO, UpdatePaymentDetailsResponse } from "./dto/payment-details-dto";
+import { CreatePaymentDetailsDTO, CreatePaymentDetailsResponse, GetPaymentDetailsResponse, UpdatePaymentDetailsDTO, UpdatePaymentDetailsResponse } from "./dto/payment-details-dto";
 
 export class AccountService extends ApiService {
   private readonly baseUrl: string
@@ -17,4 +17,7 @@ export class AccountService extends ApiService {
     return this.httpClient.put<UpdatePaymentDetailsResponse>(`${this.baseUrl}/payments-details`, updatePaymentDetailsDTO);
   }
 
+  async getPaymentDetails() {
+    return this.httpClient.get<GetPaymentDetailsResponse>(`${this.baseUrl}/payments-details/login`)
+  }
 }

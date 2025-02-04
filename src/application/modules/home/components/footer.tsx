@@ -1,7 +1,6 @@
 import Logo from '@/application/assets/logo.svg';
 import { Button } from '@/application/shared/components/ui/button';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
-import { Nav } from './nav';
 
 export function Footer() {
   return (
@@ -13,10 +12,6 @@ export function Footer() {
             <p className="text-gray-400 mt-2">
               Criando pontes de comunicação entre mundos.
             </p>
-          </div>
-
-          <div className='flex items-center justify-end'>
-            <Nav />
           </div>
         </div>
 

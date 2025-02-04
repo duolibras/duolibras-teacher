@@ -1,7 +1,6 @@
 import Logo from '@/application/assets/logo.svg';
 import { Button } from "@/application/shared/components/ui/button";
 import { NavLink } from "react-router";
-import { Nav } from './nav';
 
 export function Header() {
   return (
@@ -9,8 +8,6 @@ export function Header() {
       <div className='max-w-screen-xl mx-auto flex p-4 w-full items-center justify-between '>
         <div className='flex items-center gap-12'>
           <img src={Logo} alt="DuoLibras" className='w-40' />
-
-          <Nav />
         </div>
 
 

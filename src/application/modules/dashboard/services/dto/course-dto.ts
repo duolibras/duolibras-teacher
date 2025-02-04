@@ -20,6 +20,11 @@ export interface GetCoursesResponse {
   courses: SummaryCourse[]
 }
 
+
+export interface GetCourseResponse {
+  course: SummaryCourse
+}
+
 export const createCourseDTO = z.object({
   name: z.string(),
   description: z.string(),
@@ -53,4 +58,8 @@ export interface CreateCourseResponse {
     banner?: PresignedPost;
     video?: PresignedPost;
   }
+}
+
+export interface GetCoursePreviewResponse {
+  previewUrl: string;
 }

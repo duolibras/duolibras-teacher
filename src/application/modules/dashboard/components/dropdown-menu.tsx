@@ -16,6 +16,7 @@ import { SidebarMenuButton, useSidebar } from "@/application/shared/components/u
 import { ThemeToggle } from "@/application/shared/components/ui/theme-toggle";
 import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router";
+import { useGetPaymentDetails } from "../../account/hooks/use-get-payment-details";
 import { useMe } from "../../auth/hooks/use-me";
 import { makeAuthService } from "../../auth/services/make-auth-service";
 
@@ -24,6 +25,10 @@ export function DropdownMenuSettings() {
   const { profile } = useMe();
   const navigate = useNavigate();
   const { isMobile, open } = useSidebar()
+  const { loginUrl } = useGetPaymentDetails();
+
+  console.log(loginUrl);
+
 
   const queryClient = useQueryClient();
 
@@ -82,7 +87,7 @@ export function DropdownMenuSettings() {
             <User />
             <span>Perfil</span>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem onClick={() => loginUrl && (window.open(loginUrl, '_blank'))}>
             <CreditCard />
             <span>Pagamento</span>
           </DropdownMenuItem>

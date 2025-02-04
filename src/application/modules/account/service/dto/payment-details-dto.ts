@@ -30,3 +30,7 @@ export interface CreatePaymentDetailsResponse {
 export interface UpdatePaymentDetailsResponse {
   updatePaymentDetailsUrl: string;
 }
+
+export interface GetPaymentDetailsResponse {
+  loginUrl: string;
+}
