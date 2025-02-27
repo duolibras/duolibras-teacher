@@ -1,51 +1,64 @@
-# React + TypeScript + Vite
+# Duolibras Teacher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Duolibras Teacher](https://your-image-url.com)
 
-Currently, two official plugins are available:
+## Overview
+Duolibras Teacher is an educational platform designed to help teachers create, manage, and track Brazilian Sign Language (Libras) learning activities. It provides an intuitive interface for educators to build interactive lessons, monitor student progress, and enhance the learning experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Course Creation**: Easily design and organize lessons focused on Libras.
+- **Analytics Dashboard**: Gain insights into learning trends and student progress.
+- **Multi-Device Support**: Accessible on desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## Technologies Used
+- **Frontend**: React (Vite.js)
+- **Authentication**: JWT-based authentication system
+- **Storage**: AWS S3 for media storage
+- **Payments**: Stripe integration creating paid courses
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
+### Prerequisites
+- Node.js & npm installed
+- PostgreSQL database running
+- AWS credentials configured for S3 (optional for media storage)
 
-- Configure the top-level `parserOptions` property like this:
+### Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/duolibras/duolibras-teacher.git
+   cd duolibras-teacher
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Install dependencies:
+   ```sh
+   pnpm install
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. Set up environment variables in a `.env` file:
+   ```env
+   DATABASE_URL=postgresql://user:password@localhost:5432/duolibras
+   JWT_SECRET=your_secret_key
+   AWS_ACCESS_KEY=your_aws_access_key
+   AWS_SECRET_KEY=your_aws_secret_key
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+4. Run the database migrations:
+   ```sh
+   pnpm db:migrate:dev
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# duolibras-teacher
+5. Start the development server:
+   ```sh
+   pnpm dev
+   ```
+
+## Contributing
+Contributions are welcome! Feel free to fork this repository, create a feature branch, and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For questions or collaboration, reach out via [LinkedIn](https://linkedin.com/in/amauri-lima) or open an issue in this repository.
+
