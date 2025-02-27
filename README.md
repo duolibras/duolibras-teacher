@@ -1,6 +1,7 @@
 # Duolibras Teacher
 
-![Duolibras Teacher](https://your-image-url.com)
+![Duolibras Teacher](https://github.com/user-attachments/assets/d0217fab-02df-4283-9195-ca1d7fda0de1)
+
 
 ## Overview
 Duolibras Teacher is an educational platform designed to help teachers create, manage, and track Brazilian Sign Language (Libras) learning activities. It provides an intuitive interface for educators to build interactive lessons, monitor student progress, and enhance the learning experience.
