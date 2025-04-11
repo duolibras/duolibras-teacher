@@ -52,7 +52,7 @@ export function CoursePage() {
             {classes.length === 0 && (
               <div className="flex h-full items-center justify-center flex-col space-y-4 mt-10" >
                 <LucideBox className="size-40" />
-                Esse curso ainda não tem nenhuma aula
+                Esse conteúdo ainda não tem nenhuma aula
               </div>
             )}
 

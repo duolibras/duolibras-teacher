@@ -9,12 +9,12 @@ export function useDeleteCourse() {
   const { mutateAsync, isPending } = useMutation({
     mutationFn: coursesService.deleteCourse.bind(coursesService),
     onSuccess: () => {
-      toast.success('Curso removido com sucesso');
+      toast.success('conteúdo removido com sucesso');
       queryClient.invalidateQueries({
         queryKey: ['courses']
       });
     },
-    onError: () => toast.error('Erro ao remover curso'),
+    onError: () => toast.error('Erro ao remover conteúdo'),
   });
 
   return {

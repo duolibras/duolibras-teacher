@@ -17,7 +17,7 @@ export function CourseInfo() {
         </div>
 
         <CardMoreButton 
-          label="curso"
+          label="conteúdo"
           archived={course.archived}
           deleteFn={() => deleteCourse(course.id)}
         />

@@ -71,25 +71,25 @@ export function CreateCourseModal({ children }: IProps) {
       <AlertDialog onOpenChange={setIsCreateCourseModalOpen} open={isCreateCourseModalOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Qual tipo de curso você quer criar?</AlertDialogTitle>
+            <AlertDialogTitle>Qual tipo de conteúdo você quer criar?</AlertDialogTitle>
             <AlertDialogDescription>
-              Você pode decidir se quer criar um curso gratuito ou pago.
+              Você pode decidir se quer criar um conteúdo gratuito ou pago.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogAction onClick={handleCreateFreeCourse}>Criar curso gratuito</AlertDialogAction>
-            <AlertDialogAction onClick={handleCreatePaidCourse}>Criar curso pago</AlertDialogAction>
+            <AlertDialogAction onClick={handleCreateFreeCourse}>Criar conteúdo gratuito</AlertDialogAction>
+            <AlertDialogAction onClick={handleCreatePaidCourse}>Criar conteúdo pago</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
 
-      {/* Modal de curso pago */}
+      {/* Modal de conteúdo pago */}
       <AlertDialog open={isCreatePaymentDataModalOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>{action === 'create' ? 'Cadastrar' : 'Atualizar'} detalhes de pagamento</AlertDialogTitle>
             <AlertDialogDescription>
-              Para criar um curso pago, você precisa {action === 'create' ? 'cadastrar' : 'atualizar'} seus detalhes de pagamentos, assim podemos repassar o dinheiro das compras pra você 😀
+              Para criar um conteúdo pago, você precisa {action === 'create' ? 'cadastrar' : 'atualizar'} seus detalhes de pagamentos, assim podemos repassar o dinheiro das compras pra você 😀
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

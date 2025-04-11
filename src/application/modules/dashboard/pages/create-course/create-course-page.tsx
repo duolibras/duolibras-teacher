@@ -49,7 +49,7 @@ export function CreateCourse() {
       <GoBackButton />
       <div className="h-full w-full max-w-6xl flex justify-center items-center flex-col px-10 mx-auto">
         <div className="justify-start flex w-full mb-4">
-          <h1 className="text-3xl font-bold">Criar curso</h1>
+          <h1 className="text-3xl font-bold">Criar conteúdo</h1>
         </div>
 
         <FormProvider {...form}>
@@ -58,15 +58,15 @@ export function CreateCourse() {
               <div className="w-full h-full justify-between space-y-4 gap-8 flex">
                 <div className="w-full space-y-2">
                   <TextInput 
-                    label="Título do curso" 
-                    description="Escolha um título claro e objetivo que represente bem o conteúdo do curso."
+                    label="Título do conteúdo" 
+                    description="Escolha um título claro e objetivo que represente bem o conteúdo do conteúdo."
                     placeholder="Título"
                     field="name"
                   />
 
                   <TextAreaInput 
-                    label="Descrição do curso" 
-                    description="Explique em detalhes o que os alunos irão aprender e quais benefícios o curso oferece."
+                    label="Descrição do conteúdo" 
+                    description="Explique em detalhes o que os alunos irão aprender e quais benefícios o conteúdo oferece."
                     placeholder="Descrição"
                     field="description"
                   />
@@ -76,9 +76,9 @@ export function CreateCourse() {
                   <div className="w-full p-4 bg-muted-gradient rounded-md flex justify-center items-center">
                     <div className="space-y-2">
                       <div className="flex-col flex items-center">
-                        <Label className="text-md">Valor do curso</Label>
+                        <Label className="text-md">Valor do conteúdo</Label>
                         <span className="text-sm text-muted-foreground text-center">
-                          Defina um preço justo para seu curso. O pagamento será processado via Stripe e você receberá os valores conforme as regras da plataforma.
+                          Defina um preço justo para seu conteúdo. O pagamento será processado via Stripe e você receberá os valores conforme as regras da plataforma.
                         </span>
                       </div>
                       <Controller 
@@ -100,8 +100,8 @@ export function CreateCourse() {
               <div className="flex w-full h-full space-x-8">
                 <FileInput 
                   state={bannerDropZone} 
-                  label="Banner do curso"
-                  description="Este será a imagem principal do seu curso."
+                  label="Banner do conteúdo"
+                  description="Este será a imagem principal do seu conteúdo."
                   file={banner}
                   onRemove={() => {
                     form.setValue('files.banner', undefined);
@@ -111,8 +111,8 @@ export function CreateCourse() {
 
                 <FileInput
                   state={videoDropZone}
-                  label="Vídeo de preview do curso"
-                  description="Qualquer pessoa poderá assisti-lo antes de comprar o curso."
+                  label="Vídeo de preview do conteúdo"
+                  description="Qualquer pessoa poderá assisti-lo antes de comprar o conteúdo."
                   file={video}
                   onRemove={() => {
                     form.setValue('files.video', undefined);
@@ -126,7 +126,7 @@ export function CreateCourse() {
               <div className="space-y-1 flex flex-col">
                 <Label className="text-md">Criar como arquivado</Label>
                 <span className="text-sm text-muted-foreground">
-                  O curso será criado, mas não ficará visível para os alunos até que seja ativado.
+                  O conteúdo será criado, mas não ficará visível para os alunos até que seja ativado.
                 </span>
               </div>
               <Switch checked={isArchived} onCheckedChange={setIsArchived} />
@@ -134,7 +134,7 @@ export function CreateCourse() {
             <div className="flex justify-center w-full mt-10">
               <Button disabled={!form.formState.isValid} className="w-full" type="submit">
                 <Plus className="size-10" />
-                Criar curso
+                Criar conteúdo
               </Button>
             </div>
           </form>

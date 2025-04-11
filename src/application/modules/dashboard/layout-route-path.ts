@@ -1,21 +1,21 @@
 export const routePath: { [key: string]: { label: string, route?: string } } = {
   'dashboard': {
-    label: 'Meus cursos',
+    label: 'Meus conteúdos',
     route: '/dashboard'
   },
   'create-course': {
-    label: 'Criar curso',
+    label: 'Criar conteúdo',
   },
   'paid': {
-    label: 'Curso pago',
+    label: 'conteúdo pago',
     route: '/dashboard/create-course/paid'
   },
   'free': {
-    label: 'Curso gratuito',
+    label: 'conteúdo gratuito',
     route: '/dashboard/create-course/free'
   },
   'course': {
-    label: 'Ver Curso',
+    label: 'Ver conteúdo',
   },
   'create-class': {
     label: 'Criar aula',

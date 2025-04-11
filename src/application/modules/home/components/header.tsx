@@ -17,6 +17,11 @@ export function Header() {
               Área do professor
             </NavLink>
           </Button>
+          <Button variant="link" asChild>
+            <NavLink to="/sign-in">
+              Área do intérprete
+            </NavLink>
+          </Button>
           <Button 
             variant="outline" 
             className='rounded-full hover:bg-muted text-primary hover:text-primary'

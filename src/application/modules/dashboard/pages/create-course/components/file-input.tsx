@@ -27,7 +27,7 @@ export function FileInput({ state, description, label, file, onRemove }: IProps)
           <div 
             {...getRootProps()}
             className={cn(
-              "w-full h-full border border-dashed p-10 rounded-lg cursor-pointer transition-colors flex flex-col items-center text-muted-foreground justify-center hover:bg-accent",
+              "w-full h-full border border-dashed p-10 rounded-lg conteúdor-pointer transition-colors flex flex-col items-center text-muted-foreground justify-center hover:bg-accent",
               isDragActive && 'bg-accent'
             )}
           >

@@ -33,7 +33,7 @@ export function CardMoreButton({ archived, deleteFn, label }: IProps) {
           <span>{archived ? 'Recuperar' : 'Arquivar'}</span>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="cursor-pointer" onClick={deleteFn}>
+          <DropdownMenuItem className="conteúdor-pointer" onClick={deleteFn}>
             <Trash2 className="text-destructive" />
             <span>Remover {label}</span>
           </DropdownMenuItem>

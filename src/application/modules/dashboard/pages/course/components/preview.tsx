@@ -31,7 +31,7 @@ export function Preview() {
             onMouseLeave={() => setIsPreviewButtonVisible(false)}
             onClick={() => setIsPreviewVideoVisible(true)}
             className={cn(
-              "w-full h-full absolute top-0 left-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all flex items-center justify-center group hover:cursor-pointer"
+              "w-full h-full absolute top-0 left-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all flex items-center justify-center group hover:conteúdor-pointer"
             )}
           >
             <AnimatePresence initial={isPreviewButtonVisible}>

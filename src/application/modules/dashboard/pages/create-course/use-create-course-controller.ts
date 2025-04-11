@@ -95,7 +95,7 @@ export function useCreateCourseController() {
 
     await Promise.all(uploads);
 
-    toast.success('Curso criado com sucesso')
+    toast.success('conteúdo criado com sucesso')
   };
 
   useEffect(() => {

@@ -7,7 +7,7 @@ export function useCreateCourse() {
 
   const { mutateAsync, isPending } = useMutation({
     mutationFn: courseService.createCourse.bind(courseService),
-    onError: () => toast.error('Algo deu errado ao criar o curso'),
+    onError: () => toast.error('Algo deu errado ao criar o conteúdo'),
   });
 
   return {

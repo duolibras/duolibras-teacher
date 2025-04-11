@@ -27,7 +27,7 @@ export function Course({ course }: IProps) {
 
   return (
     <Card 
-      className="flex flex-col gap-2 max-w-[600px] cursor-pointer" 
+      className="flex flex-col gap-2 max-w-[600px] conteúdor-pointer" 
       onClick={handleClickCourse}
     >
       {course.bannerUrl && (
@@ -70,7 +70,7 @@ export function Course({ course }: IProps) {
           </div>
 
           <CardMoreButton
-            label="curso"
+            label="conteúdo"
             archived={course.archived}
             deleteFn={() => deleteCourse(course.id)}
           />
